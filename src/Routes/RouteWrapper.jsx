@@ -9,7 +9,8 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Dashboard from "../pages/Dashboard";
 import TrainerLogin from "../component/Trainers/TraLogin/TrainerLogin";
-import Eye from "../component/Admin/Ad-Dash/pages/Eye";
+import AddTrainer from "../component/Admin/Ad-Dash/pages/AddTrainer";
+import Sidebar from "../component/Admin/Ad-Dash/SideBar/Sidebar";
 // import LandingNavbar from "../components/landing-page/Navbar/LandingNavbar";
 // import DashboardLayout from "../components/User_dashboard/DashboardLayout";
 // import Footer from "../components/landing-page/Footer/Footer";
@@ -50,12 +51,12 @@ const RouteWrapper = () => {
         {/* Authentication Routes */}
         <Route path="/admin" element={<AdminLog />} />
         <Route path="/login" element={<AdminLog />} />
-        <Route path="/trainer" element={<TrainerLogin />} />
+        {/* <Route path="/trainer" element={<TrainerLogin />} /> */}
+        <Route path="/trainerdash" element= {<AddTrainer/>} />
 
         {/* Protected Dashboard Routes */}
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/Eye" element={<Eye />} />
-
+        
         {/* Future Dashboard Routes under layout */}
         {/* <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
