@@ -9,6 +9,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Dashboard from "../pages/Dashboard";
 import TrainerLogin from "../component/Trainers/TraLogin/TrainerLogin";
+import Eye from "../component/Admin/Ad-Dash/pages/Eye";
 // import LandingNavbar from "../components/landing-page/Navbar/LandingNavbar";
 // import DashboardLayout from "../components/User_dashboard/DashboardLayout";
 // import Footer from "../components/landing-page/Footer/Footer";
@@ -17,8 +18,10 @@ const RouteWrapper = () => {
   const location = useLocation();
 
   // Define special routes that don't need navbar/footer
-  const isLoginPage = ["/admin", "/trainer", "/login"].includes(location.pathname);
-  
+  const isLoginPage = ["/admin", "/trainer", "/login"].includes(
+    location.pathname
+  );
+
   // Define dashboard routes (for future use)
   const isDashboardPage = [
     "/dashboard",
@@ -29,9 +32,9 @@ const RouteWrapper = () => {
     "/members",
     "/roles",
     "/groups",
-    "/projects"
+    "/projects",
     // Add more dashboard routes here as needed
-  ].some(path => location.pathname.startsWith(path));
+  ].some((path) => location.pathname.startsWith(path));
 
   return (
     <>
@@ -51,7 +54,8 @@ const RouteWrapper = () => {
 
         {/* Protected Dashboard Routes */}
         <Route path="/dashboard" element={<Dashboard />} />
-        
+        <Route path="/Eye" element={<Eye />} />
+
         {/* Future Dashboard Routes under layout */}
         {/* <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
